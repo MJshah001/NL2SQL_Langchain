@@ -17,6 +17,8 @@ Streamlit Live Application : [click here](https://nl2sql-langchain.onrender.com/
 
 checkout sample chat here : [PDF](https://github.com/MJshah001/NL2SQL_Langchain/blob/main/Resources/nl2sql_sample_chat.pdf) |  [screenhot](https://github.com/MJshah001/NL2SQL_Langchain/blob/main/Resources/sample%20chat%20screenhot.png)
 
+Sample Database used for this demo : [classicmodels](https://www.mysqltutorial.org/getting-started-with-mysql/mysql-sample-database/)
+
 ## Features
 
 - **Natural Language to SQL Translation**:
