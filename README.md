@@ -6,18 +6,24 @@ In a data-driven world, being able to query databases without knowing SQL can em
 Welcome to the **NL2SQL** project! This project aims to revolutionize database querying by enabling natural language queries, eliminating the need for complex SQL syntax. Powered by LangChain, OpenAI GPT models, and MySQL, the system translates user queries into SQL and dynamically interacts with the database, selecting relevant tables and generating responses in plain language.
 
 
+![Architecture](https://github.com/MJshah001/NL2SQL_Langchain/blob/main/Resources/NL2SQL%20Application%20Diagram.jpg)
+
+
+
+## Live Demo
+Streamlit Live Application : [click here](https://nl2sql-langchain.onrender.com/)
+
+*(Initial load might take upto a minute or so.)*
+
+checkout sample chat here : [PDF](https://github.com/MJshah001/NL2SQL_Langchain/blob/main/Resources/nl2sql_sample_chat.pdf) |  [screenhot](https://github.com/MJshah001/NL2SQL_Langchain/blob/main/Resources/sample%20chat%20screenhot.png)
+
 ## Features
 
 - **Natural Language to SQL Translation:**: Converts user input into SQL queries using Large Language Models from OpenAI.
-
 - **Database Integration**:  Queries are executed against a live MySQL database hosted online.
-
 - **Few-Shot Learning**: Improve the accuracy of SQL generation by providing relevant examples.
-
 - **Dynamic Example and Table Selection**: Automatically choose relevant few-shot examples and database tables based on user input.
-
 - **Conversational Memory**: Maintain context across multiple queries to handle follow-up questions.
-
 - **Rephrasing of SQL Results**: Return results in user-friendly natural language.
 
 ## Teck Stack
@@ -28,17 +34,15 @@ Welcome to the **NL2SQL** project! This project aims to revolutionize database q
 - **ChromaDB**: A vector database used for dynamic example selection.
 - **Python**: The core programming language used for developing this project.
 
-## Project Architecture
-
-This NL2SQL system follows a modular architecture with the following components:
-
-
-### How It Works
+## How It Works
 
 1. The user enters a query in plain English.
 2. The input is processed through openai GPT model to generate an SQL query.
 3. The correct table from the MySQL database is selected based on the user's query.
 4. The query is executed, and the result is returned to the user in a structured format.
+
+https://github.com/user-attachments/assets/567014cc-6eaf-45bc-b8b5-f680848f731c
+
 
 ## Installation
 
@@ -92,7 +96,8 @@ Ensure you have the following tools installed:
 ## Future Enhancements
 
 - Extend the system to support additional databases like PostgreSQL and SQLite.
-- Fine-tune language models for more domain-specific use cases, such as healthcare or finance.- Improving error handling for edge cases in input translation.
+- Fine-tune language models for more domain-specific use cases, such as healthcare or finance.
+- Improving error handling for edge cases in input translation.
 
 
 ## Conclusion
