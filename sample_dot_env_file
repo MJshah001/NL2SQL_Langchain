@@ -1,0 +1,10 @@
+# create a sample .env file to run locally 
+
+db_user = ""
+db_password = ""
+db_host = ""
+db_name = ""
+
+OPENAI_API_KEY=""
+LANGCHAIN_TRACING_V2="true"
+LANGCHAIN_API_KEY=""

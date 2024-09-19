@@ -1,0 +1,4 @@
+nlsql
+__pycache__
+.streamlit
+.env
