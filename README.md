@@ -13,20 +13,31 @@ Welcome to the **NL2SQL** project! This project aims to revolutionize database q
 ## Live Demo
 Streamlit Live Application : [click here](https://nl2sql-langchain.onrender.com/)
 
-*(Initial load might take upto a minute or so.)*
+*(Initial load might take up to a minute or so.)*
 
 checkout sample chat here : [PDF](https://github.com/MJshah001/NL2SQL_Langchain/blob/main/Resources/nl2sql_sample_chat.pdf) |  [screenhot](https://github.com/MJshah001/NL2SQL_Langchain/blob/main/Resources/sample%20chat%20screenhot.png)
 
 ## Features
 
-- **Natural Language to SQL Translation:**: Converts user input into SQL queries using Large Language Models from OpenAI.
-- **Database Integration**:  Queries are executed against a live MySQL database hosted online.
-- **Few-Shot Learning**: Improve the accuracy of SQL generation by providing relevant examples.
-- **Dynamic Example and Table Selection**: Automatically choose relevant few-shot examples and database tables based on user input.
-- **Conversational Memory**: Maintain context across multiple queries to handle follow-up questions.
-- **Rephrasing of SQL Results**: Return results in user-friendly natural language.
+- **Natural Language to SQL Translation**:
+  
+   - This feature enables the chatbot to take user input in plain English (or another language) and convert it into a valid SQL query. By leveraging OpenAI's large language models (LLMs), such as GPT, the system can interpret the user's intent and map it to a corresponding SQL command, without requiring the user to know SQL syntax.
+- **Database Integration**:
 
-## Teck Stack
+   - The chatbot is connected to a live MySQL database hosted online. Once the natural language input is converted into an SQL query, it is executed directly against this MySQL database. 
+- **Few-Shot Learning**: 
+   - This technique improves the chatbot's ability to understand and generate accurate SQL queries by providing it with a few relevant examples. Instead of learning from scratch, the model uses these examples as a guide, which helps it generalize better and handle similar user queries more accurately. This is especially useful when working with ambiguous or complex queries, allowing the chatbot to produce better results with fewer mistakes.
+- **Dynamic Example and Table Selection**: 
+
+   - This feature ensures that the chatbot picks the most relevant examples and database tables based on the user's query. When a user asks a question, the system dynamically identifies which table(s) contain the required data and uses examples related to the user's input to generate an accurate SQL query.
+- **Conversational Memory**:
+
+  - The chatbot maintains a memory of previous interactions, allowing it to handle follow-up questions more effectively. It retains the context of earlier queries, meaning users don’t need to repeat themselves or reframe their queries entirely. This makes the conversation flow more naturally and enables multi-step database interactions.
+- **Rephrasing of SQL Results**:
+
+   - After generating SQL queries and fetching the results from the database, the system takes those results and rephrases them in natural language. This ensures that users get clear, understandable answers rather than raw data, which might be difficult to interpret without SQL knowledge.
+
+## Tech Stack
 
 - **LangChain**: Facilitates the natural language processing and query generation.
 - **OpenAI API**: Provides the large language models used for natural language processing and for query translation.
@@ -69,7 +80,7 @@ Ensure you have the following tools installed:
    pip install -r requirements.txt
    ```
 
-3. Set up your database connection details in your environment variables using .env file:
+3. Set up your database connection details in your environment variables using `.env` file:
 
    ```python
    os.environ["OPENAI_API_KEY"] = "<Your OpenAI API Key>"
